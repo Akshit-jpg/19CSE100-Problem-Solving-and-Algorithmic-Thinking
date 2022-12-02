@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aki"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 11:34:00 AM"/>
+        <attribute name="created" value="QWtpO1RFUkFDT1RUQV9QSUU7MjAyMi0xMi0wMjsxMTowODowMiBBTTsyNTI1"/>
+        <attribute name="edited" value="QWtpO1RFUkFDT1RUQV9QSUU7MjAyMi0xMi0wMjsxMTozNDowMCBBTTsxOzI2MzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="n is to accept input from user, i and j are for looping, while count  checks for number of factors"/>
+            <declare name="n, i, j, count" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number: &quot;" newline="True"/>
+            <comment text="taking input from user"/>
+            <input variable="n"/>
+            <output expression="&quot;All prime numbers till &quot; &amp; n &amp; &quot; are:&quot;" newline="True"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <comment text="initializing value for count each time the loop runs"/>
+                <assign variable="count" expression="0"/>
+                <for variable="j" start="1" end="i" direction="inc" step="1">
+                    <if expression="i%j==0">
+                        <then>
+                            <comment text="counting the number of factors"/>
+                            <assign variable="count" expression="count+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <comment text="checking how many factors"/>
+                <if expression="count==2">
+                    <then>
+                        <comment text="displaying number if it has 2 factors (condition for being prime number)"/>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
