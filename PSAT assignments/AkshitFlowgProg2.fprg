@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Avi Nair"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-30 09:45:16 PM"/>
+        <attribute name="created" value="QXZpIE5haXI7TEFQVE9QLTRHMTBQQlJFOzIwMjItMTAtMzA7MDk6Mjk6MTkgUE07MzAyNA=="/>
+        <attribute name="edited" value="QXZpIE5haXI7TEFQVE9QLTRHMTBQQlJFOzIwMjItMTAtMzA7MDk6Mjk6MjMgUE07MTtBdmkgTmFpcjtMQVBUT1AtNEcxMFBCUkU7MjAyMi0xMC0zMDswOToyMzo0MCBQTTtBa3NoaXRGbG93Z29Qcm9nMS5mcHJnOzg0MjU="/>
+        <attribute name="edited" value="QXZpIE5haXI7TEFQVE9QLTRHMTBQQlJFOzIwMjItMTAtMzA7MDk6MzA6MzAgUE07MTtBdmkgTmFpcjtMQVBUT1AtNEcxMFBCUkU7MjAyMi0xMC0yODswOToyNDoxNiBBTTtTdHVkZW50RGF0YUJhc2ljRmxvd2dvcml0aG1Db3B5V2l0aE1hcmtzLmZwcmc7MTA4MjY="/>
+        <attribute name="edited" value="QXZpIE5haXI7TEFQVE9QLTRHMTBQQlJFOzIwMjItMTAtMzA7MDk6NDU6MTYgUE07MjszMTI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rollno, name, address, bgroup, pno, department" type="String" array="False" size=""/>
+            <output expression="&quot;Enter Roll Number&quot;" newline="True"/>
+            <input variable="rollno"/>
+            <output expression="&quot;Enter Student Name&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter Student Address&quot;" newline="True"/>
+            <input variable="address"/>
+            <output expression="&quot;Enter Student Blood Group&quot;" newline="True"/>
+            <input variable="bgroup"/>
+            <output expression="&quot;Enter Student Phone Number&quot;" newline="True"/>
+            <input variable="pno"/>
+            <output expression="&quot;Enter Department assigned&quot;" newline="True"/>
+            <input variable="department"/>
+            <output expression="&quot;Following are the student details entered &quot;" newline="True"/>
+            <output expression="&quot;Roll Number :&quot; &amp; rollno" newline="True"/>
+            <output expression="&quot; Name :&quot; &amp; name" newline="True"/>
+            <output expression="&quot; Address : &quot; &amp; address" newline="True"/>
+            <output expression="&quot; Blood Group :&quot; &amp; bgroup" newline="True"/>
+            <output expression="&quot; Phone number : &quot; &amp; pno" newline="True"/>
+            <output expression="&quot; Department Assigned: &quot; &amp; department" newline="True"/>
+            <declare name="sem, mark1, mark2, mark3, mark4, mark5, total" type="Integer" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <declare name="subcode1, subcode2, subcode3, subcode4, subcode5" type="String" array="False" size=""/>
+            <output expression="&quot;Enter Semester Number&quot;" newline="True"/>
+            <input variable="sem"/>
+            <output expression="&quot;Enter subject 1 code&quot;" newline="True"/>
+            <input variable="subcode1"/>
+            <output expression="&quot;Enter subject &quot; &amp; subcode1 &amp; &quot; marks&quot;" newline="True"/>
+            <input variable="mark1"/>
+            <output expression="&quot;Enter subject 2 code&quot;" newline="True"/>
+            <input variable="subcode2"/>
+            <output expression="&quot;Enter subject &quot; &amp; subcode2 &amp; &quot; marks&quot;" newline="True"/>
+            <input variable="mark2"/>
+            <output expression="&quot;Enter subject 3 code&quot;" newline="True"/>
+            <input variable="subcode3"/>
+            <output expression="&quot;Enter subject &quot; &amp; subcode3 &amp; &quot; marks&quot;" newline="True"/>
+            <input variable="mark3"/>
+            <output expression="&quot;Enter subject 4 code&quot;" newline="True"/>
+            <input variable="subcode4"/>
+            <output expression="&quot;Enter subject &quot; &amp; subcode4 &amp; &quot; marks&quot;" newline="True"/>
+            <input variable="mark4"/>
+            <output expression="&quot;Enter subject 5 code&quot;" newline="True"/>
+            <input variable="subcode5"/>
+            <output expression="&quot;Enter subject &quot; &amp; subcode5 &amp; &quot; marks&quot;" newline="True"/>
+            <input variable="mark5"/>
+            <assign variable="total" expression="mark1+mark2+mark3+mark4+mark5"/>
+            <assign variable="avg" expression="total/5"/>
+            <output expression="&quot;Roll Number - &quot; &amp; rollno" newline="True"/>
+            <output expression="subcode1 &amp; &quot; - &quot; &amp; mark1" newline="True"/>
+            <output expression="subcode2 &amp; &quot; - &quot;  &amp; mark2" newline="True"/>
+            <output expression="subcode3 &amp; &quot; - &quot;  &amp; mark3" newline="True"/>
+            <output expression="subcode4 &amp; &quot; - &quot;  &amp; mark4" newline="True"/>
+            <output expression="subcode5 &amp; &quot; - &quot; &amp; mark5" newline="True"/>
+            <output expression="&quot;Total Marks = &quot; &amp; total" newline="True"/>
+            <output expression="&quot;Average Marks = &quot; &amp; avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

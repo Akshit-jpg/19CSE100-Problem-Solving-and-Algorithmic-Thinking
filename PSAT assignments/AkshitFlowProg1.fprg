@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Avi Nair"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-30 10:11:00 PM"/>
+        <attribute name="created" value="QXZpIE5haXI7TEFQVE9QLTRHMTBQQlJFOzIwMjItMTAtMjg7MDk6MjQ6MTYgQU07MzAwOA=="/>
+        <attribute name="edited" value="QXZpIE5haXI7TEFQVE9QLTRHMTBQQlJFOzIwMjItMTAtMzA7MTA6MTE6MDAgUE07MjszMTA2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rollno, name, address, bgroup, pno, department" type="String" array="False" size=""/>
+            <output expression="&quot;Enter Roll Number&quot;" newline="True"/>
+            <input variable="rollno"/>
+            <output expression="&quot;Enter Student Name&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter Student Address&quot;" newline="True"/>
+            <input variable="address"/>
+            <output expression="&quot;Enter Student Blood Group&quot;" newline="True"/>
+            <input variable="bgroup"/>
+            <output expression="&quot;Enter Student Phone Number&quot;" newline="True"/>
+            <input variable="pno"/>
+            <output expression="&quot;Enter Department assigned&quot;" newline="True"/>
+            <input variable="department"/>
+            <output expression="&quot;Student details:&quot;" newline="True"/>
+            <output expression="&quot;Roll Number: &quot; &amp; rollno" newline="True"/>
+            <output expression="&quot;Name: &quot; &amp; name" newline="True"/>
+            <output expression="&quot;Address: &quot; &amp; address" newline="True"/>
+            <output expression="&quot;Blood Group: &quot; &amp; bgroup" newline="True"/>
+            <output expression="&quot;Phone number: &quot; &amp; pno" newline="True"/>
+            <output expression="&quot;Department Assigned: &quot; &amp; department" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
