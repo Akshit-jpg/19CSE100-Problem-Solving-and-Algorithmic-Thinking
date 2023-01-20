@@ -1,0 +1,96 @@
+
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22012"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:57:10 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIzLTAxLTIwOzA5OjEyOjQwIEFNOzMwNTE="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIzLTAxLTIwOzEwOjEyOjQ5IEFNOzM7Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIzLTAxLTIwOzEwOjAzOjUwIEFNOzYyNjU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIzLTAxLTIwOzEwOjU3OjEwIEFNOzM7MzE1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables"/>
+            <declare name="size, count, innercount, holder, temp, order, count2" type="Integer" array="False" size=""/>
+            <comment text="Getting array size"/>
+            <do expression="size&lt;1">
+                <output expression="&quot;Enter the size of the array&quot;" newline="True"/>
+                <input variable="size"/>
+            </do>
+            <comment text="Declaring array"/>
+            <declare name="array" type="Integer" array="True" size="size"/>
+            <comment text="Getting array elements"/>
+            <for variable="count" start="0" end="size-1" direction="inc" step="1">
+                <output expression="&quot;Enter array element number - &quot; &amp; count+1" newline="True"/>
+                <input variable="array[count]"/>
+            </for>
+            <comment text="Getting user choice&#13;&#10;ascending and descending"/>
+            <do expression="order!=1 &amp;&amp; order!=2">
+                <output expression="&quot;Enter 1 for sorting in ascending order, 2 for sorting in descending order&quot;" newline="True"/>
+                <input variable="order"/>
+            </do>
+            <if expression="order==1">
+                <then>
+                    <comment text="Ascending order loop"/>
+                    <comment text="loop for n elements"/>
+                    <for variable="count" start="0" end="size-1" direction="inc" step="1">
+                        <comment text="storing current element index in a temp variable"/>
+                        <assign variable="holder" expression="count"/>
+                        <comment text="Inner loop to find smallest index"/>
+                        <for variable="innercount" start="count" end="size-1" direction="inc" step="1">
+                            <comment text="finding smallest element"/>
+                            <if expression="array[innercount]&lt;array[holder]">
+                                <then>
+                                    <comment text="storing index of smallest element"/>
+                                    <assign variable="holder" expression="innercount"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <comment text="Swapping smallest with current&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;"/>
+                        <assign variable="temp" expression="array[count]"/>
+                        <assign variable="array[count]" expression="array[holder]"/>
+                        <assign variable="array[holder]" expression="temp"/>
+                        <output expression="&quot;step &quot; &amp; count+1" newline="True"/>
+                        <for variable="count2" start="0" end="size-1" direction="inc" step="1">
+                            <output expression="array[count2] &amp; ToChar(13)" newline="False"/>
+                        </for>
+                    </for>
+                </then>
+                <else>
+                    <comment text="Ascending order loop"/>
+                    <comment text="loop for n elements"/>
+                    <for variable="count" start="0" end="size-1" direction="inc" step="1">
+                        <assign variable="holder" expression="count"/>
+                        <comment text="Inner loop to find laegest index"/>
+                        <for variable="innercount" start="count" end="size-1" direction="inc" step="1">
+                            <if expression="array[innercount]&gt;array[holder]">
+                                <then>
+                                    <comment text="storing index of largest element"/>
+                                    <comment text=""/>
+                                    <assign variable="holder" expression="innercount"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <comment text="Swapping largest with current&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;"/>
+                        <assign variable="temp" expression="array[count]"/>
+                        <assign variable="array[count]" expression="array[holder]"/>
+                        <assign variable="array[holder]" expression="temp"/>
+                        <output expression="&quot;step &quot; &amp; count+1" newline="True"/>
+                        <for variable="count2" start="0" end="size-1" direction="inc" step="1">
+                            <output expression="array[count2] &amp; ToChar(13)" newline="False"/>
+                        </for>
+                    </for>
+                </else>
+            </if>
+            <output expression="&quot;sorted array&quot;" newline="True"/>
+            <for variable="count" start="0" end="size-1" direction="inc" step="1">
+                <output expression="array[count] &amp; ToChar(13)" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
