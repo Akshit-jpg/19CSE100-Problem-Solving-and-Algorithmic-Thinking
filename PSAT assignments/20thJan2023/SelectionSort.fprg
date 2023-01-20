@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22011"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:52:18 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxMTsyMDIyMjNNQVlDMDA0NzsyMDIzLTAxLTIwOzA5OjA4OjUxIEFNOzMwNTY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxMTsyMDIyMjNNQVlDMDA0NzsyMDIzLTAxLTIwOzEwOjUyOjE4IEFNOzQ7MzE2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, count, KukiShinobu, Alhaitam, Xiao, holder, innercount" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter size of array:&quot;" newline="True"/>
+            <input variable="size"/>
+            <declare name="array" type="Integer" array="True" size="size"/>
+            <for variable="count" start="0" end="size-1" direction="inc" step="1">
+                <output expression="&quot;Enter value: &quot;" newline="True"/>
+                <input variable="KukiShinobu"/>
+                <assign variable="array[count]" expression="KukiShinobu"/>
+            </for>
+            <assign variable="Alhaitam" expression="array[0]"/>
+            <for variable="count" start="0" end="size-1" direction="inc" step="1">
+                <assign variable="holder" expression="count"/>
+                <for variable="innercount" start="count" end="size-1" direction="inc" step="1">
+                    <if expression="array[innercount] &lt; array[holder]">
+                        <then>
+                            <assign variable="holder" expression="innercount"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <assign variable="Xiao" expression="array[count]"/>
+                <assign variable="array[count]" expression="array[holder]"/>
+                <assign variable="array[holder]" expression="Xiao"/>
+            </for>
+            <output expression="&quot;sorted array&quot;" newline="True"/>
+            <for variable="count" start="0" end="size-1" direction="inc" step="1">
+                <output expression="array[count] &amp; tochar(13)" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
